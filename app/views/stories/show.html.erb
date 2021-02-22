@@ -1,0 +1,14 @@
+<button>
+<%= link_to "Back to Stories List", root_path %>
+</button>
+<br/><br/>
+<h1><%= @story.title %></h1>
+by <em><%= @story.author%></em><br/><br/>
+<p><%= @story.body %></p>
+<br/>
+<button>
+<%= link_to "Edit Story", edit_story_path(@story) %>
+</button>
+<button id="delete">
+<%= link_to "Delete Story", story_path(@story), method: :delete, data: {confirm: "Are you sure?"} %>
+</button>

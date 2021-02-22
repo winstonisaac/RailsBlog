@@ -1,0 +1,12 @@
+<h1>The First Blog</h1>
+<ul>
+  <% @stories.each do |story| %>
+  <li>
+    <strong><%= link_to story.title, story %></strong> by
+    <em><%= story.author%></em>
+  </li>
+  <%end%>
+</ul>
+<button>
+<%= link_to "New Story", new_story_path %>
+</button>

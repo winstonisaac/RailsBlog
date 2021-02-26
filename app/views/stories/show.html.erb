@@ -12,3 +12,6 @@ by <em><%= @story.author%></em><br/><br/>
 <button id="delete">
 <%= link_to "Delete Story", story_path(@story), method: :delete, data: {confirm: "Are you sure?"} %>
 </button>
+<br><br>
+<%= render "comments/comments"%>
+<%= link_to "Add Comment", new_story_comment_path(@story) %>

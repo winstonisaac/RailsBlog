@@ -1,0 +1,7 @@
+<% @comments.each do |comment| %>
+  <em>Anonymous</em> posted at <%=comment.created_at%><br>
+  <div class='comment'><%=comment.content%></div>
+  <%= link_to "Edit", edit_story_comment_path(@story, comment) %> | 
+  <span class='red'><%= link_to "Delete", story_comment_path(@story, comment), method: :delete, data: {confirm: "Are you sure?"}  %></span>
+  <br><br>
+<%end%>
